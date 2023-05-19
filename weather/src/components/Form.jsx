@@ -18,7 +18,7 @@ const Getbutton = styled(Button)({
     backgroundColor : '#e67e22'
 })
 
-export const Form = () => {
+export const Form = ({setResult}) => {
     const [data, setData] = useState({ city: '', country: ''})
 
     const handleChange = (e) =>{
@@ -27,7 +27,8 @@ export const Form = () => {
 
 
     const GetData = async() =>{
-      let result = await getWeather(data.city, data.country)
+      let response = await getWeather(data.city, data.country);
+      setResult(response);
     }
 
   return (
