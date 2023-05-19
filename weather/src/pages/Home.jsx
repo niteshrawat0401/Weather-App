@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import {Box, styled} from "@mui/material"
-import sunrise from "../assets/image/sunrise.jpg"
+import sunrise from "../assets/image/cloud-blue-sky.jpg"
 import { Form } from '../components/Form'
 import { Display } from '../components/Display'
 
 const Component = styled(Box)({
     height: '100vh',
     display: 'flex',
-    margin: '0 auto',
     alignItems: 'center',
+    margin: '0 auto',
     width: '65%'
 })
 
@@ -27,7 +27,7 @@ export const Home = () => {
   return (
     <Component>
         <Image></Image>
-        <Box style={{ border:"1px solid red", width: "73%", height: "80%"}}>
+        <Box style={{ border:"1px solid #3a62f6", width: "73%", height: "80%"}}>
             <Form setResult={setResult}/>
             <Display result={result}/>
         </Box>

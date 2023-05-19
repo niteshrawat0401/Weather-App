@@ -4,18 +4,19 @@ import styled from '@emotion/styled'
 import { getWeather } from '../services/api'
 
 const Container = styled(Box)({
-    background: '#445A6F',
+    background: '#5d9ce4',
     padding : 10,
 })
 
 const Input = styled(InputBase)({
     color: '#FFF',
     marginRight : 20,
-    fontSize : 18
+    fontSize : 18,
+    borderRadius: 10,
 })
 
 const Getbutton = styled(Button)({
-    backgroundColor : '#e67e22'
+    backgroundColor : '#3a62f6'
 })
 
 export const Form = ({setResult}) => {
@@ -34,7 +35,7 @@ export const Form = ({setResult}) => {
   return (
     <Container>
         <Input placeholder='City' name= 'city' onChange={(e)=> handleChange(e)}/>
-        <Input placeholder='Country' name= 'country' onChange={(e)=> handleChange(e)}/>
+        {/* <Input placeholder='Country' name= 'country' onChange={(e)=> handleChange(e)}/> */}
         <Getbutton onClick={GetData} variant='contained'>Get Weather</Getbutton>
     </Container>
   )

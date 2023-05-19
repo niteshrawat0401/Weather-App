@@ -6,7 +6,16 @@ export const Display = ({result}) => {
     const Row = styled(Typography)({
         padding: 10,
         fontSize : 20,
-        letterSpacing: 2
+        letterSpacing: 2,
+        '& > svg': {
+            marginRight : 10
+        }
+    })
+
+    const Error = styled(Typography)({
+        color: "red",
+        margin: 50,
+        fontSize: 22
     })
 
   return (
@@ -19,8 +28,6 @@ export const Display = ({result}) => {
         <Row><Brightness6/>Sun Set: {new Date(result.sys.sunset * 1000).toLocaleTimeString()}</Row>
         <Row><Dehaze/>Humidity: {result.weather[0].main}</Row>
         <Row><Cloud/>Clouds: {result.clouds.all}%</Row>
-
-
-    </Box> : null
+    </Box> : <Error>Please enter the detail</Error>
   )
 }
