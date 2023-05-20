@@ -27,9 +27,9 @@ export const Home = () => {
   return (
     <Component>
         <Image></Image>
-        <Box style={{ border:"1px solid #3a62f6", width: "73%", height: "80%"}}>
+        <Box style={{ backgroundColor: '#eff8ff', border:"1px solid #3a62f6", width: "73%", height: "80%"}}>
             <Form setResult={setResult}/>
-            <Display result={result}/>
+            <Display  result={result}/>
         </Box>
     </Component>
   )

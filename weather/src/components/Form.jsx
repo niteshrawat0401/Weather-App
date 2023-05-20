@@ -28,14 +28,14 @@ export const Form = ({setResult}) => {
 
 
     const GetData = async() =>{
-      let response = await getWeather(data.city, data.country);
-      setResult(response);
+      let response = await getWeather(data.city);
+        setResult(response);
     }
 
   return (
     <Container>
-        <Input placeholder='City' name= 'city' onChange={(e)=> handleChange(e)}/>
-        {/* <Input placeholder='Country' name= 'country' onChange={(e)=> handleChange(e)}/> */}
+        <Input placeholder='City' name= 'city' onChange={(e)=> handleChange(e)} />
+        <Input placeholder='Country' name= 'country' onChange={(e)=> handleChange(e)}/>
         <Getbutton onClick={GetData} variant='contained'>Get Weather</Getbutton>
     </Container>
   )
